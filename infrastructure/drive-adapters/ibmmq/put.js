@@ -83,7 +83,7 @@ function sendMessage( msg ) {
   pmo.Options = MQC.MQPMO_NO_SYNCPOINT |
     MQC.MQPMO_NEW_MSG_ID |
     MQC.MQPMO_NEW_CORREL_ID;
-  return mq.PutPromise(hObj, mqmd, pmo, msg);
+  return mq.PutPromise(ghObj, mqmd, pmo, msg);
 }
 
 module.exports = {
