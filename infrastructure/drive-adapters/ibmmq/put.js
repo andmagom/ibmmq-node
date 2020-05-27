@@ -31,8 +31,12 @@ function cleanup(hConn, hObj) {
   });
 }
 
-var cno = new mq.MQCNO();
+const cno = new mq.MQCNO();
 cno.Options = MQC.MQCNO_NONE; // use MQCNO_CLIENT_BINDING to connect as client
+const cd = new mq.MQCD();
+cd.ConnectionName = "172.31.38.61(1414)";
+cd.ChannelName = "SYSTEM.DEF.SVRCONN";
+cno.ClientConn = cd;
 
 if (true) {
   var csp = new mq.MQCSP();

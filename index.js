@@ -8,7 +8,7 @@ const bodyParser = require('body-parser')
 const port = 3000
 
 if (cluster.isMaster) {
-  for (var i = 0; i < numCPUs; i++) {
+  for (var i = 0; i < 1; i++) {
     console.log('New worker ' + i);
     cluster.fork(); //creating child process
   }
