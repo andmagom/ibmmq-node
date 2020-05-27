@@ -35,7 +35,7 @@ const cno = new mq.MQCNO();
 cno.Options = MQC.MQCNO_NONE; // use MQCNO_CLIENT_BINDING to connect as client
 const cd = new mq.MQCD();
 cd.ConnectionName = "172.31.38.61(1414)";
-cd.ChannelName = "SYSTEM.DEF.SVRCONN";
+cd.ChannelName = "DEV.APP.SVRCONN";
 cno.ClientConn = cd;
 
 if (true) {
